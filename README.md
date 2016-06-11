@@ -6,6 +6,9 @@ Oauth is included. You need appId and appSecret. Both must be added to tiapp.xml
 
 ![](https://content.linkedin.com/content/dam/developer/global/en_US/site/img/signin-button.png) 
 ![](https://api.slack.com/img/sign_in_with_slack.png)
+![](https://mymari_static.s3.amazonaws.com/mymari/img/icon-google.png)
+![](http://i.stack.imgur.com/pZzc4.png)
+
 
 
 The actual module will be visible next days. ;-)
