@@ -1,0 +1,19 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 2
+architectures: armeabi armeabi-v7a x86
+description: tilinkedin
+author: Rainer Schleevoigt
+license: Specify your license
+copyright: Copyright (c) 2016 by 
+
+# these should not be edited
+name: TiLinkedIn
+moduleid: de.appwerft.linkedin
+guid: 49b24f8e-e482-49d8-9654-7646dc260da9
+platform: android
+minsdk: 4.0.0.GA
+commonjs: true

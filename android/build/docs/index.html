@@ -1,0 +1,25 @@
+<h1>Ti.LinkedIn</h1>
+<p>This is a module for getting some infos from LinkedInportal. With it you can also share to profile.
+Oauth2.0 is included. You need appId and appSecret. Both must be added to tiapp.xml as String property</p>
+<p>Thanks to @andreav <img alt="" src="https://ti-slack.slack.com/team/andreav" /> for help and @thijsalbers <img alt="" src="https://ti-slack.slack.com/team/thijsalbers" /> for sponsoring. If you need some extends, please free and contact me.</p>
+<h2>Usage</h2>
+<p>It is a very simple API:</p>
+<p>~~~</p>
+<p>var LinkedIn = require('de.appwerft.linkedin');
+LinkedIn.getProfile('me', function(_e) {
+    alert(_e.data);
+});
+~~~</p>
+<p>You will get a result like this: </p>
+<p><img alt="" src="https://raw.githubusercontent.com/AppWerft/Ti.LinkedIn/master/documentation/res.png" /></p>
+<p>More getter are: getPositionById(), getCompanyById, postShare(), getProfileWithContacts();</p>
+<p>For all request you need scopes (see documentation). As allowed redirect_uri you must add  'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png'. This is dirty workeround, because LinkedIn doesn't support oob.</p>
+<p>These are entry in you tiapp.xml:</p>
+<p>~~~
+<property name="linkedin_id" type="string">7798<strong><em>*xfs</property>
+<property name="linkedin_secret" type="string">wqApS</em></strong>54G8Ky</property></p>
+<p>/<em> optional</em>/
+<property name="linkedin_redirecturl" type="string">https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png</property></p>
+<p>~~~</p>
+<p>You need these entries:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/AppWerft/Ti.LinkedIn/master/documentation/screen.png" /></p>

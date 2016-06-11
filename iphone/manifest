@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 2
+architectures: armv7 arm64 i386 x86_64
+description: linkedin
+author: Rainer Schleevoigt
+license: Specify your license
+copyright: Copyright (c) 2016 by 
+
+# these should not be edited
+name: linkedin
+moduleid: de.appwerft.linkedin
+guid: a944c698-f8af-41f2-a807-57400e62f214
+platform: iphone
+minsdk: 3.5.1.GA
