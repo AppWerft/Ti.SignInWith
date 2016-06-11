@@ -30,27 +30,3 @@ var bearer = SignIn.getAccessToken('linkedin');
 ~~~
 
 Currently the module supports slack, meetup, linkedin, facebook, twitter, google+, xing
-
-You will get a result like this: 
-
-
-![](https://raw.githubusercontent.com/AppWerft/Ti.LinkedIn/master/documentation/res.png)
-
-
-
-For all request you need scopes (see documentation). As allowed redirect_uri you must add  'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png'. This is dirty workeround, because LinkedIn doesn't support oob.
-
-These are entry in you tiapp.xml:
-
-~~~
-<property name="linkedin_id" type="string">7798****xfs</property>
-<property name="linkedin_secret" type="string">wqApS***54G8Ky</property>
-
-/* optional*/
-<property name="linkedin_redirecturl" type="string">https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png</property>
-
-~~~
-
-You need these entries:
-
-![](https://raw.githubusercontent.com/AppWerft/Ti.LinkedIn/master/documentation/screen.png)
