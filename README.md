@@ -10,8 +10,8 @@ Oauth is included. You need appId and appSecret. Both must be added to tiapp.xml
 
 The actual module will be visible next days. ;-)
 
-Usage
------
+General usage
+-------------
 
 It is a very simple API:
 
@@ -21,12 +21,12 @@ var SignIn = require('de.appwerft.signinwith');
 
 // we have two methods:
 // first getting profile, if not signed in a login screen is generated:
-SignIn.getProfile('slack', function(_e) {
+SignIn.getProfile(PROVIDER, function(_e) {
     alert(_e.data);
 });
 
 // second, a simple helper function for other purpose:
-var bearer = SignIn.getAccessToken('linkedin');
+var bearer = SignIn.getAccessToken(PROVIDER);
 ~~~
 
 Currently the module supports slack, meetup, linkedin, facebook, twitter, google+, xing
