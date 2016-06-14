@@ -38,9 +38,7 @@ var providers = {
 		FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
 		scope : "https://www.googleapis.com/auth/tasks",
 		version : 2
-	},
-	
-	"dropbox" : {
+	},"dropbox" : {
 		title : 'Dropbox',
 		REQUEST_AUTHORIZATION_URL : 'https://accounts.google.com/o/oauth2/auth',
 		ACCESSTOKEN_URL : 'https://www.googleapis.com/oauth2/v3/token',
@@ -294,8 +292,10 @@ function createSelectDialog() {
 			backgroundColor : 'white'
 		});
 		providerArray.forEach(function(p) {
+			var url='https://raw.githubusercontent.com/AppWerft/Ti.SignInWith/master/documentation/' + p + '.png?$€§';
+			console.log(url);
 			container.add(Ti.UI.createImageView({
-				image : 'https://raw.githubusercontent.com/AppWerft/Ti.SignInWith/master/documentation/' + p + '.png?__',
+				image : url,
 				height : 80,
 				top : 0,
 				provider : p,

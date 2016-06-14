@@ -292,8 +292,10 @@ function createSelectDialog() {
 			backgroundColor : 'white'
 		});
 		providerArray.forEach(function(p) {
+			var url='https://raw.githubusercontent.com/AppWerft/Ti.SignInWith/master/documentation/' + p + '.png?$€§';
+			console.log(url);
 			container.add(Ti.UI.createImageView({
-				image : 'https://raw.githubusercontent.com/AppWerft/Ti.SignInWith/master/documentation/' + p + '.png?__',
+				image : url,
 				height : 80,
 				top : 0,
 				provider : p,
