@@ -1,5 +1,6 @@
 var providers = {
 	linkedin : {
+		title : "LinkedIn",
 		REQUEST_AUTHORIZATION_URL : 'https://www.linkedin.com/oauth/v2/authorization',
 		ACCESSTOKEN_URL : 'https://www.linkedin.com/oauth/v2/accessToken',
 		PROFILE_URL : 'https://api.linkedin.com/v1/people/~:(id,first-name,last-name,num-connections,picture-url,maiden-name,headline,location,summary,email-address,positions)',
@@ -8,6 +9,35 @@ var providers = {
 		SCOPE : "r_basicprofile",
 	},
 	"slack" : {
+		title : 'Slack',
+		REQUEST_AUTHORIZATION_URL : 'https://www.linkedin.com/oauth/v2/authorization',
+		ACCESSTOKEN_URL : 'https://www.linkedin.com/oauth/v2/accessToken',
+		PROFILE_URL : "https://api.linkedin.com/v1/",
+		BLANK_DUMMY_WEBPAGE : 'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png',
+		FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
+		scope : "read"
+	},
+	"facebook" : {
+		title : 'Facebook',
+		REQUEST_AUTHORIZATION_URL : 'https://www.linkedin.com/oauth/v2/authorization',
+		ACCESSTOKEN_URL : 'https://www.linkedin.com/oauth/v2/accessToken',
+		PROFILE_URL : "https://api.linkedin.com/v1/",
+		BLANK_DUMMY_WEBPAGE : 'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png',
+		FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
+		scope : "read"
+	},
+	"gplus" : {
+		title : 'Google+',
+		REQUEST_AUTHORIZATION_URL : 'https://www.linkedin.com/oauth/v2/authorization',
+		ACCESSTOKEN_URL : 'https://www.linkedin.com/oauth/v2/accessToken',
+		PROFILE_URL : "https://api.linkedin.com/v1/",
+		BLANK_DUMMY_WEBPAGE : 'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png',
+		FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
+		scope : "read"
+	},
+
+	"twitter" : {
+		title : 'Twitter',
 		REQUEST_AUTHORIZATION_URL : 'https://www.linkedin.com/oauth/v2/authorization',
 		ACCESSTOKEN_URL : 'https://www.linkedin.com/oauth/v2/accessToken',
 		PROFILE_URL : "https://api.linkedin.com/v1/",
@@ -229,29 +259,56 @@ var getProfile = function(_provider, _callback) {
 
 function createSelectDialog() {
 	var args = arguments[0] || {};
-	var cb = arguments[1] || function(){};
+	var cb = arguments[1] ||
+	function() {
+	};
+	var providerArray = Object.getOwnPropertyNames(providers);
 	if (Ti.Android) {
-		var dialog = Ti.UI.createAlertDialog();
+		var container = Ti.UI.createView({
+			layout : 'vertical',
+			opacity : 0,
+			backgroundColor : 'white'
+		});
+		providerArray.forEach(function(p) {
+			container.add(Ti.UI.createImageView({
+				image : 'https://raw.githubusercontent.com/AppWerft/Ti.SignInWith/master/documentation/' + p + '.png?__',
+				height : 80,
+				top : 0,
+				provider : p,
+				borderWidth : 5,
+				borderColor : 'white',
+				width : '100%'
+			}));
+		});
+		var dialog = Ti.UI.createAlertDialog({
+			androidView : container,
+			title : "Connect with your social provider:"
+		});
+		dialog.show();
+		container.animate({
+			opacity : 1
+		});
+		container.addEventListener('click', function(_e) {
+			console.log(_e.source.provider);
+			cb && cb(_e.source.provider);
+			dialog.hide();
+			dialog = null;
+		});
 	} else {
-		var dialog = Ti.UI.createOptionsDialog();
+		var dialog = Ti.UI.createOptionDialog({
+			cancel : providerArray.length,
+			title : args.title || '',
+			options : providerArray.push('Cancel')
+		});
+		dialog.addEventListener('click', function(_e) {
+			if (_e.cancel != _e.index && cb) {
+				cb(providerArray[_e.index]);
+				dialog.hide();
+				dialog = null;
+			}
+		});
+		dialog.show();
 	}
-	win = Ti.UI.createWindow({
-			title : args.title || 'Select you account',
-		backgroundColor : 'transparent',
-		width : 200,
-		height : 300,
-		theme : 'Theme.AppCompat.NoTitleBar',
-	});
-	win.add(Ti.UI.createImageView({
-		width : 200,
-		height : 300,
-		backgroundImage : '/accounts.png'
-	}));
-	
-	win.open({
-		modal : true,
-		animate : true
-	});
 
 }
 

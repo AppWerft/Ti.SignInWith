@@ -31,4 +31,4 @@ SignIn.createSelectDialog({title:"Select what you want:"},function(_provider){
 
 ~~~
 
-Currently the module supports slack, meetup, linkedin, facebook, twitter, google+, xing
+Currently the module supports linkedin
