@@ -1,4 +1,4 @@
-# Main NDK build script for de.appwerft.linkedin
+# Main NDK build script for de.appwerft.signinwith
 
 APP_BUILD_SCRIPT := jni/Android.mk
 TARGET_PLATFORM := android-10

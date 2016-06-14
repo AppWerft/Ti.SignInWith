@@ -1,18 +1,16 @@
 %define lookup-function-name lookupGeneratedInit
-%define class-name TilinkedinBindings
+%define class-name TisigninwithBindings
 %{
 
 #include <string.h>
 #include <v8.h>
 #include <KrollBindings.h>
 
-#include "de.appwerft.linkedin.ExampleProxy.h"
-#include "de.appwerft.linkedin.TilinkedinModule.h"
+#include "de.appwerft.signinwith.TisigninwithModule.h"
 
 
 %}
 struct titanium::bindings::BindEntry;
 %%
-de.appwerft.linkedin.ExampleProxy, ::de::appwerft::linkedin::tilinkedin::ExampleProxy::bindProxy, ::de::appwerft::linkedin::tilinkedin::ExampleProxy::dispose
-de.appwerft.linkedin.TilinkedinModule, ::de::appwerft::linkedin::TilinkedinModule::bindProxy, ::de::appwerft::linkedin::TilinkedinModule::dispose
+de.appwerft.signinwith.TisigninwithModule, ::de::appwerft::signinwith::TisigninwithModule::bindProxy, ::de::appwerft::signinwith::TisigninwithModule::dispose
 %%

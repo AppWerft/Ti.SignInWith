@@ -1,23 +1,22 @@
 /* C++ code produced by gperf version 3.0.3 */
-/* Command-line: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/gperf -L C++ -E -t /private/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/fuerst/TiLinkedIn-generated/KrollGeneratedBindings.gperf  */
+/* Command-line: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/gperf -L C++ -E -t /private/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/fuerst/TiSignInWith-generated/KrollGeneratedBindings.gperf  */
 /* Computed positions: -k'' */
 
-#line 3 "/private/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/fuerst/TiLinkedIn-generated/KrollGeneratedBindings.gperf"
+#line 3 "/private/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/fuerst/TiSignInWith-generated/KrollGeneratedBindings.gperf"
 
 
 #include <string.h>
 #include <v8.h>
 #include <KrollBindings.h>
 
-#include "de.appwerft.linkedin.ExampleProxy.h"
-#include "de.appwerft.linkedin.TilinkedinModule.h"
+#include "de.appwerft.signinwith.TisigninwithModule.h"
 
 
-#line 14 "/private/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/fuerst/TiLinkedIn-generated/KrollGeneratedBindings.gperf"
+#line 13 "/private/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/fuerst/TiSignInWith-generated/KrollGeneratedBindings.gperf"
 struct titanium::bindings::BindEntry;
-/* maximum key range = 5, duplicates = 0 */
+/* maximum key range = 1, duplicates = 0 */
 
-class TilinkedinBindings
+class TisigninwithBindings
 {
 private:
   static inline unsigned int hash (const char *str, unsigned int len);
@@ -27,21 +26,21 @@ public:
 
 inline /*ARGSUSED*/
 unsigned int
-TilinkedinBindings::hash (register const char *str, register unsigned int len)
+TisigninwithBindings::hash (register const char *str, register unsigned int len)
 {
   return len;
 }
 
 struct titanium::bindings::BindEntry *
-TilinkedinBindings::lookupGeneratedInit (register const char *str, register unsigned int len)
+TisigninwithBindings::lookupGeneratedInit (register const char *str, register unsigned int len)
 {
   enum
     {
-      TOTAL_KEYWORDS = 2,
-      MIN_WORD_LENGTH = 33,
-      MAX_WORD_LENGTH = 37,
-      MIN_HASH_VALUE = 33,
-      MAX_HASH_VALUE = 37
+      TOTAL_KEYWORDS = 1,
+      MIN_WORD_LENGTH = 41,
+      MAX_WORD_LENGTH = 41,
+      MIN_HASH_VALUE = 41,
+      MAX_HASH_VALUE = 41
     };
 
   static struct titanium::bindings::BindEntry wordlist[] =
@@ -49,12 +48,10 @@ TilinkedinBindings::lookupGeneratedInit (register const char *str, register unsi
       {""}, {""}, {""}, {""}, {""}, {""}, {""}, {""}, {""},
       {""}, {""}, {""}, {""}, {""}, {""}, {""}, {""}, {""},
       {""}, {""}, {""}, {""}, {""}, {""}, {""}, {""}, {""},
-      {""}, {""}, {""}, {""}, {""}, {""},
-#line 16 "/private/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/fuerst/TiLinkedIn-generated/KrollGeneratedBindings.gperf"
-      {"de.appwerft.linkedin.ExampleProxy", ::de::appwerft::linkedin::tilinkedin::ExampleProxy::bindProxy, ::de::appwerft::linkedin::tilinkedin::ExampleProxy::dispose},
-      {""}, {""}, {""},
-#line 17 "/private/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/fuerst/TiLinkedIn-generated/KrollGeneratedBindings.gperf"
-      {"de.appwerft.linkedin.TilinkedinModule", ::de::appwerft::linkedin::TilinkedinModule::bindProxy, ::de::appwerft::linkedin::TilinkedinModule::dispose}
+      {""}, {""}, {""}, {""}, {""}, {""}, {""}, {""}, {""},
+      {""}, {""}, {""}, {""}, {""},
+#line 15 "/private/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/fuerst/TiSignInWith-generated/KrollGeneratedBindings.gperf"
+      {"de.appwerft.signinwith.TisigninwithModule", ::de::appwerft::signinwith::TisigninwithModule::bindProxy, ::de::appwerft::signinwith::TisigninwithModule::dispose}
     };
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
@@ -71,5 +68,5 @@ TilinkedinBindings::lookupGeneratedInit (register const char *str, register unsi
     }
   return 0;
 }
-#line 18 "/private/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/fuerst/TiLinkedIn-generated/KrollGeneratedBindings.gperf"
+#line 16 "/private/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/fuerst/TiSignInWith-generated/KrollGeneratedBindings.gperf"
 

@@ -1,44 +1,35 @@
-Ti.LinkedIn
-===========
+Ti.SignInWith
+=============
 
-This is a module for getting some infos from LinkedInportal. With it you can also share to profile.
-Oauth2.0 is included. You need appId and appSecret. Both must be added to tiapp.xml as String property
+This is a generic module for signin and retreiving profile informations.
+Oauth is included. You need appId and appSecret. Both must be added to tiapp.xml as String property
 
-Thanks to @andreav ![](https://ti-slack.slack.com/team/andreav) for help and @thijsalbers ![](https://ti-slack.slack.com/team/thijsalbers) for sponsoring. If you need some extends, please free and contact me.
+![](https://content.linkedin.com/content/dam/developer/global/en_US/site/img/signin-button.png) 
+![](https://api.slack.com/img/sign_in_with_slack.png)
+![](https://mymari_static.s3.amazonaws.com/mymari/img/icon-google.png)
+![](http://i.stack.imgur.com/pZzc4.png)
 
-Usage
------
+
+
+The actual module will be visible next days. ;-)
+
+General usage
+-------------
 
 It is a very simple API:
 
 ~~~
 
-var LinkedIn = require('de.appwerft.linkedin');
-LinkedIn.getProfile('me', function(_e) {
+var SignIn = require('de.appwerft.signinwith');
+
+// we have two methods:
+// first getting profile, if not signed in a login screen is generated:
+SignIn.getProfile(PROVIDER, function(_e) {
     alert(_e.data);
 });
+
+// second, a simple helper function for other purpose:
+var bearer = SignIn.getAccessToken(PROVIDER);
 ~~~
 
-You will get a result like this: 
-
-
-![](https://raw.githubusercontent.com/AppWerft/Ti.LinkedIn/master/documentation/res.png)
-
-More getter are: getPositionById(), getCompanyById, postShare(), getProfileWithContacts();
-
-For all request you need scopes (see documentation). As allowed redirect_uri you must add  'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png'. This is dirty workeround, because LinkedIn doesn't support oob.
-
-These are entry in you tiapp.xml:
-
-~~~
-<property name="linkedin_id" type="string">7798****xfs</property>
-<property name="linkedin_secret" type="string">wqApS***54G8Ky</property>
-
-/* optional*/
-<property name="linkedin_redirecturl" type="string">https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png</property>
-
-~~~
-
-You need these entries:
-
-![](https://raw.githubusercontent.com/AppWerft/Ti.LinkedIn/master/documentation/screen.png)
+Currently the module supports slack, meetup, linkedin, facebook, twitter, google+, xing

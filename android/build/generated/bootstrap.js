@@ -16,33 +16,16 @@ function moduleBootstrap(moduleBinding) {
 			name, namespace, moduleBinding.getBinding);
 	}
 
-	var module = moduleBinding.getBinding("de.appwerft.linkedin.TilinkedinModule")["Tilinkedin"];
+	var module = moduleBinding.getBinding("de.appwerft.signinwith.TisigninwithModule")["Tisigninwith"];
 	var invocationAPIs = module.invocationAPIs = [];
-	module.apiName = "Tilinkedin";
+	module.apiName = "Tisigninwith";
 
 	function addInvocationAPI(module, moduleNamespace, namespace, api) {
 		invocationAPIs.push({ namespace: namespace, api: api });
 	}
 
-		addInvocationAPI(module, "Tilinkedin", "Tilinkedin", "createExample");
-
-			if (!("__propertiesDefined__" in module)) {		
-		Object.defineProperties(module, {
-			"Example": {
-				get: function() {
-					var Example = lazyGet(this, "de.appwerft.linkedin.ExampleProxy", "Example", "Example");
-					return Example;
-				},
-				configurable: true
-			},
-		
-		});
-		module.constructor.prototype.createExample = function() {
-			return new module.Example(arguments);
-		}
-		}
-		module.__propertiesDefined__ = true;
-		return module;
+	
+			return module;
 
 }
 exports.bootstrap = moduleBootstrap;

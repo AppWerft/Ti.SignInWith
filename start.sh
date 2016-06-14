@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APPID=de.appwerft.linkedin
+APPID=de.appwerft.signinwith
 VERSION=1.0.0
 
 cd android;ant ;  unzip -uo  dist/$APPID-android-$VERSION.zip  -d  ~/Library/Application\ Support/Titanium/;cd ..

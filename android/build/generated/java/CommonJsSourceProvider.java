@@ -6,7 +6,7 @@
  *
  * Warning: This file is GENERATED, and should not be modified
  */
-package de.appwerft.linkedin;
+package de.appwerft.signinwith;
 
 import org.appcelerator.kroll.common.KrollSourceCodeProvider;
 
@@ -14,13 +14,13 @@ public class CommonJsSourceProvider implements KrollSourceCodeProvider
 {
 	public String getSourceCode()
 	{
-		return getSourceCode("de.appwerft.linkedin");
+		return getSourceCode("de.appwerft.signinwith");
 	}
 
 	public String getSourceCode(String module)
 	{
-		if (module.equals("de.appwerft.linkedin/de.appwerft.linkedin")) {
-			module = "de.appwerft.linkedin";
+		if (module.equals("de.appwerft.signinwith/de.appwerft.signinwith")) {
+			module = "de.appwerft.signinwith";
 		}
 
 		AssetCryptImpl source = new AssetCryptImpl();

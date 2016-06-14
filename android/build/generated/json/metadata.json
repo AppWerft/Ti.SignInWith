@@ -1,1 +1,1 @@
-{"exports": ["xml", "network", "appcompat", "locale", "media", "app", "ui.activityindicatorstyle", "analytics", "ui", "filesystem", "android", "app.properties"]}
+{"exports": ["xml", "signinwith", "network", "appcompat", "locale", "media", "app", "ui.activityindicatorstyle", "analytics", "ui", "filesystem", "android", "app.properties"]}

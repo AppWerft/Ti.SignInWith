@@ -5,14 +5,14 @@
 version: 1.0.0
 apiversion: 2
 architectures: armeabi armeabi-v7a x86
-description: tilinkedin
+description: Titanium Module for generic social login
 author: Rainer Schleevoigt
-license: Specify your license
+license: Apache
 copyright: Copyright (c) 2016 by 
 
 # these should not be edited
-name: TiLinkedIn
-moduleid: de.appwerft.linkedin
+name: TiSignInWith
+moduleid: de.appwerft.signinwith
 guid: 49b24f8e-e482-49d8-9654-7646dc260da9
 platform: android
 minsdk: 4.0.0.GA

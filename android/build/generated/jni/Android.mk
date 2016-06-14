@@ -1,11 +1,11 @@
-# Android.mk for de.appwerft.linkedin
+# Android.mk for de.appwerft.signinwith
 LOCAL_PATH := $(call my-dir)
 THIS_DIR := $(LOCAL_PATH)
 
 include $(CLEAR_VARS)
 
 THIS_DIR = $(LOCAL_PATH)
-LOCAL_MODULE := de.appwerft.linkedin
+LOCAL_MODULE := de.appwerft.signinwith
 LOCAL_CFLAGS := -g "-I$(TI_MOBILE_SDK)/android/native/include"
 
 # https://jira.appcelerator.org/browse/TIMOB-15263

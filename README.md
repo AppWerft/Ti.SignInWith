@@ -5,6 +5,8 @@ This is a generic module for signin and retreiving profile informations.
 Oauth is included. You need appId and appSecret. Both must be added to tiapp.xml as String property
 
 
+![](https://raw.githubusercontent.com/AppWerft/Ti.SignInWith/master/documentation/Screenshot.png)
+
 General usage
 -------------
 

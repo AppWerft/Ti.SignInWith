@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/fuerst/Documents/APPC_WORKSPACE/Ti.LinkedIn/iphone/Classes/DeAppwerftLinkedinModule.m \
-  /Users/fuerst/Documents/APPC_WORKSPACE/Ti.LinkedIn/iphone/Classes/DeAppwerftLinkedinModule.h \
+  /Users/fuerst/Documents/APPC_WORKSPACE/Ti.SignInWith/iphone/Classes/DeAppwerftLinkedinModule.m \
+  /Users/fuerst/Documents/APPC_WORKSPACE/Ti.SignInWith/iphone/Classes/DeAppwerftLinkedinModule.h \
   /Library/Application\ Support/Titanium/mobilesdk/osx/3.5.1.GA/iphone/include/TiModule.h \
   /Library/Application\ Support/Titanium/mobilesdk/osx/3.5.1.GA/iphone/include/TiProxy.h \
   /Library/Application\ Support/Titanium/mobilesdk/osx/3.5.1.GA/iphone/include/TiBase.h \
