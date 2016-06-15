@@ -31,4 +31,13 @@ SignIn.createSelectDialog({title:"Select what you want:"},function(_provider){
 
 ~~~
 
-Currently the module supports linkedin
+Currently the module supports linkedin, googleplus, facebook, slack, dropbox
+In your tiapp.xml you need entries like:
+~~~
+<property name="linkedin_clientId" type="string">77981g**1xfs</property>
+<property name="linkedin_clientSecret" type="string">wqApSZ**</property>
+<property name="slack_clientId" type="string">3437706020:508**6</property>
+<property name="slack_clientSecret" type="string">01f887a1****0c8128f966492f</property>
+~~~
+For slack you must replace '.' wuth ':' (workaround)
+
