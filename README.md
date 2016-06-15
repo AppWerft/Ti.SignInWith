@@ -39,5 +39,5 @@ In your tiapp.xml you need entries like:
 <property name="slack_clientId" type="string">3437706020:508**6</property>
 <property name="slack_clientSecret" type="string">01f887a1****0c8128f966492f</property>
 ~~~
-For slack you must replace '.' wuth ':' (workaround)
+For slack you must replace '.' with ':' (workaround, interpretation of string with '.' as float and then cutting on the end)
 
