@@ -9,6 +9,16 @@ var providers = {
 		SCOPE : "r_basicprofile",
 		version : 2
 	},
+	"amazone" : {
+		title : "Amazone",
+		REQUEST_AUTHORIZATION_URL : 'https://www.linkedin.com/oauth/v2/authorization',
+		ACCESSTOKEN_URL : 'https://www.linkedin.com/oauth/v2/accessToken',
+		PROFILE_URL : 'https://api.linkedin.com/v1/people/~:(id,first-name,last-name,num-connections,picture-url,maiden-name,headline,location,summary,email-address,positions)',
+		BLANK_DUMMY_WEBPAGE : 'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png',
+		FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
+		SCOPE : "r_basicprofile",
+		version : 2
+	},
 	"slack" : {
 		title : 'Slack',
 		REQUEST_AUTHORIZATION_URL : 'https://slack.com/oauth/authorize',
@@ -16,7 +26,8 @@ var providers = {
 		PROFILE_URL : "https://slack.com/api/users.list",
 		BLANK_DUMMY_WEBPAGE : 'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png',
 		FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
-		scope : "users:read",
+		SCOPE : "users:read",
+
 		version : 2
 	},
 	"facebook" : {
@@ -26,7 +37,7 @@ var providers = {
 		PROFILE_URL : "https://graph.facebook.com/v2.3/me",
 		BLANK_DUMMY_WEBPAGE : 'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png',
 		FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
-		scope : "public_profile",
+		SCOPE : "public_profile",
 		version : 2
 	},
 	"gplus" : {
@@ -36,26 +47,17 @@ var providers = {
 		PROFILE_URL : "https://www.googleapis.com/plus/v1/people/me",
 		BLANK_DUMMY_WEBPAGE : 'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png',
 		FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
-		scope : "https://www.googleapis.com/auth/tasks",
-		version : 2
-	},"dropbox" : {
-		title : 'Dropbox',
-		REQUEST_AUTHORIZATION_URL : 'https://accounts.google.com/o/oauth2/auth',
-		ACCESSTOKEN_URL : 'https://www.googleapis.com/oauth2/v3/token',
-		PROFILE_URL : "https://www.googleapis.com/plus/v1/people/me",
-		BLANK_DUMMY_WEBPAGE : 'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png',
-		FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
-		scope : "https://www.googleapis.com/auth/tasks",
+		SCOPE : "https://www.googleapis.com/auth/tasks",
 		version : 2
 	},
-	"github" : {
-		title : 'Github',
-		REQUEST_AUTHORIZATION_URL : 'https://accounts.google.com/o/oauth2/auth',
-		ACCESSTOKEN_URL : 'https://www.googleapis.com/oauth2/v3/token',
-		PROFILE_URL : "https://www.googleapis.com/plus/v1/people/me",
+	"dropbox" : {
+		title : 'Dropbox',
+		REQUEST_AUTHORIZATION_URL : 'https://www.dropbox.com/1/oauth2/authorize',
+		ACCESSTOKEN_URL : 'https://www.dropbox.com/1/oauth2/token',
+		PROFILE_URL : "https://api.dropboxapi.com/2/users/get_current_account",
 		BLANK_DUMMY_WEBPAGE : 'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png',
 		FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
-		scope : "https://www.googleapis.com/auth/tasks",
+		SCOPE : "",
 		version : 2
 	}/*,
 	 "twitter" : {
@@ -71,7 +73,6 @@ var providers = {
 
 var _opt,
     _prop;
-var _initialized = false;
 
 function encodeQueryData(data) {
 	return Object.getOwnPropertyNames(data).map(function(item) {
@@ -87,9 +88,13 @@ var init = function(_provider) {
 		return false;
 	}
 	_opt.propertyName = _provider + 'Token';
-	_opt.clientId = Ti.App.Properties.getString(_provider + "_id");
-	_opt.clientSecret = Ti.App.Properties.getString(_provider + "_secret");
-	var win;
+	try {
+		_opt.clientId = Ti.App.Properties.getString(_provider + "_clientId").replace(':', '.');
+	} catch(E) {
+	}
+	_opt.clientSecret = Ti.App.Properties.getString(_provider + "_clientSecret");
+	_opt.team = Ti.App.Properties.getString(_provider + "_team");
+
 	_prop = {
 		accessToken : null,
 		expiresIn : 0
@@ -102,7 +107,7 @@ var init = function(_provider) {
 	if (prop.expiresIn >= (new Date()).getTime()) {
 		_prop = prop;
 	}
-	_initialized = true;
+	console.log(_opt);
 };
 /**
  * Get TOKEN
@@ -149,7 +154,7 @@ function _getToken(code, callback) {
 }
 
 function _authorize(_callback) {
-	_initialized || init(_provider);
+
 	var callback = _callback;
 	win = Ti.UI.createWindow({
 		backgroundImage : '/karo.png',
@@ -167,11 +172,12 @@ function _authorize(_callback) {
 		redirect_uri : _opt.BLANK_DUMMY_WEBPAGE,
 		response_type : 'code',
 		scope : [_opt.SCOPE],
+		team : _opt.team,
 		client_id : _opt.clientId,
 		btmpl : "mobile"
 	})].join('?');
 	console.log(_opt);
-	console.log("≠≠≠≠≠≠≠≠≠≠≠Start Authorization against LinkedIn≠≠≠≠≠≠≠≠≠≠≠≠≠≠\n" + url);
+	console.log("≠≠≠≠≠≠≠≠≠≠≠Start Authorization against≠≠≠≠≠≠≠≠≠≠≠≠≠≠\n" + url);
 
 	var webview = Ti.UI.createWebView({
 		borderWidth : 3,
@@ -215,13 +221,14 @@ function _authorize(_callback) {
 }
 
 var getAccessToken = function(_provider) {
-	_initialized || init(_provider);
+
 	return Ti.App.Properties.getString(_opt.propertyName + '.accessToken', null);
 };
 
 /* MAIN  function */
 var getProfile = function(_provider, _callback) {
-	_initialized || init(_provider);
+	console.log(_provider + "\n...................");
+	init(_provider);
 	var loopcounter = 0;
 	var callback = _callback;
 	function mGet() {
@@ -289,11 +296,11 @@ function createSelectDialog() {
 		var container = Ti.UI.createView({
 			layout : 'vertical',
 			opacity : 0,
+			top : 20,
 			backgroundColor : 'white'
 		});
 		providerArray.forEach(function(p) {
-			var url='https://raw.githubusercontent.com/AppWerft/Ti.SignInWith/master/documentation/' + p + '.png?$€§';
-			console.log(url);
+			var url = 'https://raw.githubusercontent.com/AppWerft/Ti.SignInWith/master/documentation/' + p + '.png';
 			container.add(Ti.UI.createImageView({
 				image : url,
 				height : 80,
