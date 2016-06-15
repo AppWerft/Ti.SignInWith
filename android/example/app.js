@@ -1,39 +1,29 @@
-// This is a test harness for your module
-// You should do something interesting in this harness
-// to test out the module and to provide instructions
-// to users on how to use it by example.
 
-
-// open a single window
-var win = Ti.UI.createWindow({
-	backgroundColor:'white'
+!function(){var $ = Titanium.UI.createWindow({
+	title : 'SignIn API Test',
+	backgroundImage : '/karo.png'
 });
-var label = Ti.UI.createLabel();
-win.add(label);
-win.open();
-
-// TODO: write your module tests here
-var tilinkedin = require('de.appwerft.linkedin');
-Ti.API.info("module is => " + tilinkedin);
-
-label.text = tilinkedin.example();
-
-Ti.API.info("module exampleProp is => " + tilinkedin.exampleProp);
-tilinkedin.exampleProp = "This is a test value";
-
-if (Ti.Platform.name == "android") {
-	var proxy = tilinkedin.createExample({
-		message: "Creating an example Proxy",
-		backgroundColor: "red",
-		width: 100,
-		height: 100,
-		top: 100,
-		left: 150
+var button = Ti.UI.createButton({
+	height : 80,
+	width : '80%',
+	title : 'Login with …'
+});
+$.add(button);
+$.addEventListener('open', function() {
+	var SI = require('de.appwerft.signinwith');
+	require('lib/permissions').requestPermissions('WRITE_EXTERNAL_STORAGE', function(success) {
+		if (success) {
+			button.addEventListener('click', function() {
+				var dialog = SI.createSelectDialog({
+					title : ''
+				}, function(provider) {
+					SI.getProfile(provider, function(_e) {
+						alert(_e.data);
+					});
+				});
+			});
+		}
 	});
 
-	proxy.printMessage("Hello world!");
-	proxy.message = "Hi world!.  It's me again.";
-	proxy.printMessage("Hello world!");
-	win.add(proxy);
-}
-
+});
+$.open();}();
