@@ -9,14 +9,13 @@ var providers = {
 		SCOPE : "r_basicprofile",
 		version : 2
 	},
-	"amazone" : {
-		title : "Amazone",
-		REQUEST_AUTHORIZATION_URL : 'https://www.linkedin.com/oauth/v2/authorization',
-		ACCESSTOKEN_URL : 'https://www.linkedin.com/oauth/v2/accessToken',
-		PROFILE_URL : 'https://api.linkedin.com/v1/people/~:(id,first-name,last-name,num-connections,picture-url,maiden-name,headline,location,summary,email-address,positions)',
+	"amazon" : {
+		title : "Amazon",
+		REQUEST_AUTHORIZATION_URL : 'https://www.amazon.com/ap/oa',
+		ACCESSTOKEN_URL : 'https://api.amazon.com/auth/o2/token',
 		BLANK_DUMMY_WEBPAGE : 'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png',
 		FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
-		SCOPE : "r_basicprofile",
+		SCOPE : "clouddrive:read_document",PROFILE_URL:"",
 		version : 2
 	},
 	"slack" : {
@@ -109,6 +108,20 @@ var init = function(_provider) {
 	}
 	console.log(_opt);
 };
+
+function _cacheLogo(view,provider) {
+	var f = Ti.Filesystem.getFile(Ti.Filesystem.applicationCacheDirectory, provider);
+	if (f.exists()) {
+		view.setImage(f.nativePath);
+		return;
+	}
+	var $ = Ti.Network.createHTTPClient({onload: function(){
+		f.write(this.responseData);
+		view.setImage(f.nativePath);
+	}});
+	$.open("GET","https://raw.githubusercontent.com/AppWerft/Ti.SignInWith/master/documentation/"+ provider + '.png');
+	$.send();	
+} 
 /**
  * Get TOKEN
  */
@@ -296,20 +309,23 @@ function createSelectDialog() {
 		var container = Ti.UI.createView({
 			layout : 'vertical',
 			opacity : 0,
-			top : 20,
+			top : 10,
 			backgroundColor : 'white'
 		});
 		providerArray.forEach(function(p) {
 			var url = 'https://raw.githubusercontent.com/AppWerft/Ti.SignInWith/master/documentation/' + p + '.png';
-			container.add(Ti.UI.createImageView({
+			var logo =Ti.UI.createImageView({
 				image : url,
 				height : 80,
 				top : 0,
 				provider : p,
 				borderWidth : 5,
 				borderColor : 'white',
-				width : '100%'
-			}));
+				width : '90%'
+			});
+			_cacheLogo(logo,p);
+			container.add(logo);
+			
 		});
 		var dialog = Ti.UI.createAlertDialog({
 			androidView : container,
