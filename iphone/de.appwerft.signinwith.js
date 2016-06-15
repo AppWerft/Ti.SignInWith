@@ -9,6 +9,16 @@ var providers = {
 		SCOPE : "r_basicprofile",
 		version : 2
 	},
+	"amazone" : {
+		title : "Amazone",
+		REQUEST_AUTHORIZATION_URL : 'https://www.linkedin.com/oauth/v2/authorization',
+		ACCESSTOKEN_URL : 'https://www.linkedin.com/oauth/v2/accessToken',
+		PROFILE_URL : 'https://api.linkedin.com/v1/people/~:(id,first-name,last-name,num-connections,picture-url,maiden-name,headline,location,summary,email-address,positions)',
+		BLANK_DUMMY_WEBPAGE : 'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png',
+		FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
+		SCOPE : "r_basicprofile",
+		version : 2
+	},
 	"slack" : {
 		title : 'Slack',
 		REQUEST_AUTHORIZATION_URL : 'https://slack.com/oauth/authorize',
