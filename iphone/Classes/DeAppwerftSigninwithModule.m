@@ -1,29 +1,29 @@
 /**
- * linkedin
+ * signinwith
  *
  * Created by Rainer Schleevoigt
  * Copyright (c) 2016 . All rights reserved.
  */
 
-#import "DeAppwerftLinkedinModule.h"
+#import "DeAppwerftSigninwithModule.h"
 #import "TiBase.h"
 #import "TiHost.h"
 #import "TiUtils.h"
 
-@implementation DeAppwerftLinkedinModule
+@implementation DeAppwerftSigninwithModule
 
 #pragma mark Internal
 
 // this is generated for your module, please do not change it
 -(id)moduleGUID
 {
-	return @"a944c698-f8af-41f2-a807-57400e62f214";
+	return @"e91cb0de-7a05-4cd0-8475-b3e25f71598f";
 }
 
 // this is generated for your module, please do not change it
 -(NSString*)moduleId
 {
-	return @"de.appwerft.linkedin";
+	return @"de.appwerft.signinwith";
 }
 
 #pragma mark Lifecycle

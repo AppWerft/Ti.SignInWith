@@ -5,14 +5,14 @@
 version: 1.0.0
 apiversion: 2
 architectures: armv7 arm64 i386 x86_64
-description: SignInWith
+description: signinwith
 author: Rainer Schleevoigt
-license: MIT
+license: Specify your license
 copyright: Copyright (c) 2016 by 
 
 # these should not be edited
-name: linkedin
+name: signinwith
 moduleid: de.appwerft.signinwith
-guid: a944c698-f8af-41f2-a807-57400e62f214
+guid: e91cb0de-7a05-4cd0-8475-b3e25f71598f
 platform: iphone
 minsdk: 3.5.1.GA

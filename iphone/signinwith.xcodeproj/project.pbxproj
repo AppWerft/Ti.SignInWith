@@ -22,11 +22,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		24DD6CF91134B3F500162E58 /* DeAppwerftLinkedinModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DD6CF71134B3F500162E58 /* DeAppwerftLinkedinModule.h */; };
-		24DD6CFA1134B3F500162E58 /* DeAppwerftLinkedinModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* DeAppwerftLinkedinModule.m */; };
-		24DE9E1111C5FE74003F90F6 /* DeAppwerftLinkedinModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* DeAppwerftLinkedinModuleAssets.h */; };
-		24DE9E1211C5FE74003F90F6 /* DeAppwerftLinkedinModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* DeAppwerftLinkedinModuleAssets.m */; };
-		AA747D9F0F9514B9006C5449 /* DeAppwerftLinkedin_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* DeAppwerftLinkedin_Prefix.pch */; };
+		24DD6CF91134B3F500162E58 /* DeAppwerftSigninwithModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DD6CF71134B3F500162E58 /* DeAppwerftSigninwithModule.h */; };
+		24DD6CFA1134B3F500162E58 /* DeAppwerftSigninwithModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* DeAppwerftSigninwithModule.m */; };
+		24DE9E1111C5FE74003F90F6 /* DeAppwerftSigninwithModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* DeAppwerftSigninwithModuleAssets.h */; };
+		24DE9E1211C5FE74003F90F6 /* DeAppwerftSigninwithModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* DeAppwerftSigninwithModuleAssets.m */; };
+		AA747D9F0F9514B9006C5449 /* DeAppwerftSigninwith_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* DeAppwerftSigninwith_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,19 +36,19 @@
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = "linkedin";
+			remoteInfo = "signinwith";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24DD6CF71134B3F500162E58 /* DeAppwerftLinkedinModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DeAppwerftLinkedinModule.h"; path = "Classes/DeAppwerftLinkedinModule.h"; sourceTree = "<group>"; };
-		24DD6CF81134B3F500162E58 /* DeAppwerftLinkedinModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DeAppwerftLinkedinModule.m"; path = "Classes/DeAppwerftLinkedinModule.m"; sourceTree = "<group>"; };
+		24DD6CF71134B3F500162E58 /* DeAppwerftSigninwithModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DeAppwerftSigninwithModule.h"; path = "Classes/DeAppwerftSigninwithModule.h"; sourceTree = "<group>"; };
+		24DD6CF81134B3F500162E58 /* DeAppwerftSigninwithModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DeAppwerftSigninwithModule.m"; path = "Classes/DeAppwerftSigninwithModule.m"; sourceTree = "<group>"; };
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
-		24DE9E0F11C5FE74003F90F6 /* DeAppwerftLinkedinModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DeAppwerftLinkedinModuleAssets.h"; path = "Classes/DeAppwerftLinkedinModuleAssets.h"; sourceTree = "<group>"; };
-		24DE9E1011C5FE74003F90F6 /* DeAppwerftLinkedinModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DeAppwerftLinkedinModuleAssets.m"; path = "Classes/DeAppwerftLinkedinModuleAssets.m"; sourceTree = "<group>"; };
-		AA747D9E0F9514B9006C5449 /* DeAppwerftLinkedin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DeAppwerftLinkedin_Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		24DE9E0F11C5FE74003F90F6 /* DeAppwerftSigninwithModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DeAppwerftSigninwithModuleAssets.h"; path = "Classes/DeAppwerftSigninwithModuleAssets.h"; sourceTree = "<group>"; };
+		24DE9E1011C5FE74003F90F6 /* DeAppwerftSigninwithModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DeAppwerftSigninwithModuleAssets.m"; path = "Classes/DeAppwerftSigninwithModuleAssets.m"; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* DeAppwerftSigninwith_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DeAppwerftSigninwith_Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D2AAC07E0554694100DB518D /* libDeAppwerftLinkedin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libDeAppwerftLinkedin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AAC07E0554694100DB518D /* libDeAppwerftSigninwith.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libDeAppwerftSigninwith.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +66,12 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2AAC07E0554694100DB518D /* libDeAppwerftLinkedin.a */,
+				D2AAC07E0554694100DB518D /* libDeAppwerftSigninwith.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0867D691FE84028FC02AAC07 /* linkedin */ = {
+		0867D691FE84028FC02AAC07 /* signinwith */ = {
 			isa = PBXGroup;
 			children = (
 				08FB77AEFE84172EC02AAC07 /* Classes */,
@@ -79,7 +79,7 @@
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
-			name = "linkedin";
+			name = "signinwith";
 			sourceTree = "<group>";
 		};
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
@@ -93,10 +93,10 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				24DE9E0F11C5FE74003F90F6 /* DeAppwerftLinkedinModuleAssets.h */,
-				24DE9E1011C5FE74003F90F6 /* DeAppwerftLinkedinModuleAssets.m */,
-				24DD6CF71134B3F500162E58 /* DeAppwerftLinkedinModule.h */,
-				24DD6CF81134B3F500162E58 /* DeAppwerftLinkedinModule.m */,
+				24DE9E0F11C5FE74003F90F6 /* DeAppwerftSigninwithModuleAssets.h */,
+				24DE9E1011C5FE74003F90F6 /* DeAppwerftSigninwithModuleAssets.m */,
+				24DD6CF71134B3F500162E58 /* DeAppwerftSigninwithModule.h */,
+				24DD6CF81134B3F500162E58 /* DeAppwerftSigninwithModule.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -104,7 +104,7 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				AA747D9E0F9514B9006C5449 /* DeAppwerftLinkedin_Prefix.pch */,
+				AA747D9E0F9514B9006C5449 /* DeAppwerftSigninwith_Prefix.pch */,
 				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
 			);
 			name = "Other Sources";
@@ -117,18 +117,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA747D9F0F9514B9006C5449 /* DeAppwerftLinkedin_Prefix.pch in Headers */,
-				24DD6CF91134B3F500162E58 /* DeAppwerftLinkedinModule.h in Headers */,
-				24DE9E1111C5FE74003F90F6 /* DeAppwerftLinkedinModuleAssets.h in Headers */,
+				AA747D9F0F9514B9006C5449 /* DeAppwerftSigninwith_Prefix.pch in Headers */,
+				24DD6CF91134B3F500162E58 /* DeAppwerftSigninwithModule.h in Headers */,
+				24DE9E1111C5FE74003F90F6 /* DeAppwerftSigninwithModuleAssets.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D2AAC07D0554694100DB518D /* linkedin */ = {
+		D2AAC07D0554694100DB518D /* signinwith */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "linkedin" */;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "signinwith" */;
 			buildPhases = (
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
@@ -138,9 +138,9 @@
 			);
 			dependencies = (
 			);
-			name = "linkedin";
-			productName = "linkedin";
-			productReference = D2AAC07E0554694100DB518D /* libDeAppwerftLinkedin.a */;
+			name = "signinwith";
+			productName = "signinwith";
+			productReference = D2AAC07E0554694100DB518D /* libDeAppwerftSigninwith.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -151,7 +151,7 @@
 			attributes = {
 				LastUpgradeCheck = 0600;
 			};
-			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "linkedin" */;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "signinwith" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -161,12 +161,12 @@
 				French,
 				German,
 			);
-			mainGroup = 0867D691FE84028FC02AAC07 /* linkedin */;
+			mainGroup = 0867D691FE84028FC02AAC07 /* signinwith */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2AAC07D0554694100DB518D /* linkedin */,
+				D2AAC07D0554694100DB518D /* signinwith */,
 				24416B8111C4CA220047AFDD /* Build & Test */,
 			);
 		};
@@ -193,8 +193,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24DD6CFA1134B3F500162E58 /* DeAppwerftLinkedinModule.m in Sources */,
-				24DE9E1211C5FE74003F90F6 /* DeAppwerftLinkedinModuleAssets.m in Sources */,
+				24DD6CFA1134B3F500162E58 /* DeAppwerftSigninwithModule.m in Sources */,
+				24DE9E1211C5FE74003F90F6 /* DeAppwerftSigninwithModuleAssets.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +203,7 @@
 /* Begin PBXTargetDependency section */
 		24416B8511C4CA280047AFDD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D2AAC07D0554694100DB518D /* linkedin */;
+			target = D2AAC07D0554694100DB518D /* signinwith */;
 			targetProxy = 24416B8411C4CA280047AFDD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -215,11 +215,11 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DSTROOT = "/tmp/DeAppwerftLinkedin.dst";
+				DSTROOT = "/tmp/DeAppwerftSigninwith.dst";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DeAppwerftLinkedin_Prefix.pch";
+				GCC_PREFIX_HEADER = "DeAppwerftSigninwith_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -239,7 +239,7 @@
 					"-DTI_POST_1_2",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "DeAppwerftLinkedin";
+				PRODUCT_NAME = "DeAppwerftSigninwith";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
@@ -253,11 +253,11 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				DSTROOT = "/tmp/DeAppwerftLinkedin.dst";
+				DSTROOT = "/tmp/DeAppwerftSigninwith.dst";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DeAppwerftLinkedin_Prefix.pch";
+				GCC_PREFIX_HEADER = "DeAppwerftSigninwith_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -274,7 +274,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "DeAppwerftLinkedin";
+				PRODUCT_NAME = "DeAppwerftSigninwith";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -288,11 +288,11 @@
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DSTROOT = "/tmp/DeAppwerftLinkedin.dst";
+				DSTROOT = "/tmp/DeAppwerftSigninwith.dst";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DeAppwerftLinkedin_Prefix.pch";
+				GCC_PREFIX_HEADER = "DeAppwerftSigninwith_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -311,7 +311,7 @@
 					"-DTI_POST_1_2",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "DeAppwerftLinkedin";
+				PRODUCT_NAME = "DeAppwerftSigninwith";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
@@ -326,11 +326,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LIBRARY = "libstdc++";
-				DSTROOT = "/tmp/DeAppwerftLinkedin.dst";
+				DSTROOT = "/tmp/DeAppwerftSigninwith.dst";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DeAppwerftLinkedin_Prefix.pch";
+				GCC_PREFIX_HEADER = "DeAppwerftSigninwith_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -346,7 +346,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "DeAppwerftLinkedin";
+				PRODUCT_NAME = "DeAppwerftSigninwith";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -379,7 +379,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "linkedin" */ = {
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "signinwith" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB921F08733DC00010E9CD /* Debug */,
@@ -388,7 +388,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "linkedin" */ = {
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "signinwith" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,
