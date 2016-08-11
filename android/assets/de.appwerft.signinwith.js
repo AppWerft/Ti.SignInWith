@@ -10,15 +10,15 @@ var providers = {
 		version : 2
 	},
 	/*"amazon" : {
-		title : "Amazon",
-		REQUEST_AUTHORIZATION_URL : 'https://www.amazon.com/ap/oa',
-		ACCESSTOKEN_URL : 'https://api.amazon.com/auth/o2/token',
-		BLANK_DUMMY_WEBPAGE : 'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png',
-		FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
-		SCOPE : "clouddrive:read_document",
-		PROFILE_URL : "",
-		version : 2
-	},*/
+	 title : "Amazon",
+	 REQUEST_AUTHORIZATION_URL : 'https://www.amazon.com/ap/oa',
+	 ACCESSTOKEN_URL : 'https://api.amazon.com/auth/o2/token',
+	 BLANK_DUMMY_WEBPAGE : 'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png',
+	 FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
+	 SCOPE : "clouddrive:read_document",
+	 PROFILE_URL : "",
+	 version : 2
+	 },*/
 	"slack" : {
 		title : 'Slack',
 		REQUEST_AUTHORIZATION_URL : 'https://slack.com/oauth/authorize',
@@ -59,6 +59,17 @@ var providers = {
 		FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
 		SCOPE : "",
 		version : 2
+	},
+	"вконтакт" : {
+		title : 'ВКонтакт',
+		REQUEST_AUTHORIZATION_URL : '',
+		ACCESSTOKEN_URL : '',
+		PROFILE_URL : "",
+		BLANK_DUMMY_WEBPAGE : 'https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png',
+		FAKE_USERAGENT : "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0",
+		SCOPE : "",
+		version : 2
+
 	}/*,
 	 "twitter" : {
 	 title : 'Twitter',
